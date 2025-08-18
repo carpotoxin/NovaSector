@@ -22,6 +22,12 @@
 /datum/dynamic_ruleset/midround/from_ghosts/marauder/prepare_for_role(datum/mind/player_mind)
 	for(var/datum/dynamic_ruleset/midround/from_ghosts/marauder/ruleset in SSdynamic.executed_rulesets)
 		marauder_no++
+	//load the map, if its the first time running don't force
+	if(marauder_no == 1)
+		SSmapping.lazy_load_template(LAZY_TEMPLATE_KEY_MIDROUND_TRAITOR)
+	else
+		SSmapping.lazy_load_template(LAZY_TEMPLATE_KEY_MIDROUND_TRAITOR, TRUE)
+	return ..()
 
 /datum/dynamic_ruleset/midround/from_ghosts/marauder/assign_role(datum/mind/player_mind)
 	var/datum/antagonist/traitor/marauder/antag_datum = new /datum/antagonist/traitor/marauder
