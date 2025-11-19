@@ -44,7 +44,6 @@
 //NOVA EDIT ADDITION START
 #define ROLE_BORER "Borer"
 #define ROLE_DRIFTING_CONTRACTOR "Drifting Contractor"
-#define ROLE_MARAUDER "Marauder"
 #define ROLE_MUTANT "Mutated Abomination"
 #define ROLE_CLOCK_CULTIST "Clock Cultist"
 // NOVA EDIT ADDITION END
